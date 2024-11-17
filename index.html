@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Архитектурный планировщик</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Элементы</h2>
+            <div class="draggable" draggable="true" data-type="room" data-width="100" data-height="100">
+                <input type="text" class="element-name" placeholder="Название" value="Комната">
+                <input type="number" class="element-width" placeholder="Ширина" value="100">
+                <input type="number" class="element-height" placeholder="Высота" value="100">
+            </div>
+            <div class="draggable" draggable="true" data-type="kitchen" data-width="150" data-height="100">
+                <input type="text" class="element-name" placeholder="Название" value="Кухня">
+                <input type="number" class="element-width" placeholder="Ширина" value="150">
+                <input type="number" class="element-height" placeholder="Высота" value="100">
+            </div>
+            <div class="draggable" draggable="true" data-type="bathroom" data-width="80" data-height="80">
+                <input type="text" class="element-name" placeholder="Название" value="Ванная">
+                <input type="number" class="element-width" placeholder="Ширина" value="80">
+                <input type="number" class="element-height" placeholder="Высота" value="80">
+            </div>
+            <h3>Добавить новый элемент</h3>
+            <form id="add-element-form">
+                <input type="text" id="new-element-name" placeholder="Название" required>
+                <input type="number" id="new-element-width" placeholder="Ширина" required>
+                <input type="number" id="new-element-height" placeholder="Высота" required>
+                <button type="submit">Добавить</button>
+            </form>
+        </div>
+        <div class="canvas-container">
+            <h2 id="canvas-title">Планировка</h2>
+            <div class="canvas-settings">
+                <label for="canvas-width">Ширина:</label>
+                <input type="number" id="canvas-width" value="800">
+                <label for="canvas-height">Высота:</label>
+                <input type="number" id="canvas-height" value="600">
+                <button id="apply-canvas-settings">Применить</button>
+            </div>
+            <div class="canvas" id="canvas">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
